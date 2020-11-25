@@ -1,0 +1,96 @@
+.bar {
+  background: rgb(14, 14, 14);
+  height: 12vh;
+  color: white;
+  display: flex;
+}
+
+.ticker {
+  font-weight: bold;
+  font-family: Raleway, sans-serif;
+  color: rgb(146, 146, 146);
+}
+
+.real-sign {
+  font-family: sans-serif;
+  color: white;
+  font-weight: lighter;
+}
+
+.time {
+  // background: red;
+  height: 100%;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: bolder;
+}
+
+.weather-day {
+  // background: blue;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  .Weather {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: lightblue;
+    padding-top: 10px;
+    overflow: hidden;
+  }
+
+  .icon-wrapper {
+    padding-top: 5px;
+  }
+}
+
+.stock {
+  // background: yellow;
+  height: 100%;
+  display: flex;
+  width: 800px;
+  flex-grow: 2;
+  justify-content: space-around;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: lighter;
+  font-family: sans-serif;
+  color: white;
+}
+
+.points {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  font-family: sans-serif;
+  color: white;
+}
+
+.logo {
+  // background: gray;
+  flex-grow: 1;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1750px) {
+  .stock {
+    width: 1000px;
+  }
+}
