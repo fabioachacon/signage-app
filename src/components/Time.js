@@ -2,16 +2,16 @@ import React, {useState, useEffect} from 'react';
 import {checkTime} from '../utils';
 
 const Time = () => {
-    let interval;
+
 
     const getTime = (time) => {
         let hour =  time.getHours();
         let minutes = time.getMinutes();
-        let seconds = time.getSeconds();
+        // let seconds = time.getSeconds();
 
         hour = checkTime(hour);
         minutes = checkTime(minutes);
-        seconds = checkTime(seconds);
+        // seconds = checkTime(seconds);
         const currentHour = [hour, minutes].join(':');
         return currentHour;
     } 
@@ -20,7 +20,7 @@ const Time = () => {
     const [currentTime, setCurrentTime] = useState(getTime(new Date()));
 
     const upDateTime = () => {
-        interval = setInterval(() => {
+            setInterval(() => {
             setCurrentTime(getTime(new Date()))
         }, 1000)
     }

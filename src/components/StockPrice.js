@@ -8,16 +8,8 @@ const StockPrice = () => {
     const URL_BOVESPA = 'https://valorinveste.globo.com/cotacoes/ibovespa/';
     const DOLLAR_PRICE_API = 'https://economia.awesomeapi.com.br/json/all';
     const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
-    let timerId;
+    // let timerId;
 
-    // const [price, setPrice] = useState({
-    //     dollar: '',
-    //     ibovespa: {
-    //         IbovPrice: '',
-    //         points: ''
-    //     },
-    //     nasdaq: ''
-    // });
 
     const [dollarPrice, setDollarPrice] = useState();
     const [ibovPrice, setIbovPrice] = useState({
@@ -87,7 +79,7 @@ const StockPrice = () => {
     }
 
     const upDateStock = () => {
-        timerId = setInterval(fetchInfo, 60000 * 5);
+         setInterval(fetchInfo, 60000 * 5);
     }
 
     useEffect(() => {
