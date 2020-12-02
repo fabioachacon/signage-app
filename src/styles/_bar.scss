@@ -54,18 +54,17 @@
 }
 
 .stock {
-  // background: yellow;
   height: 100%;
   display: flex;
   width: 800px;
-  flex-grow: 2;
+  padding-right: 10px;
   justify-content: space-around;
-  font-size: 2rem;
+  font-size: 1.7rem;
   align-items: center;
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: lighter;
   font-family: sans-serif;
   color: white;

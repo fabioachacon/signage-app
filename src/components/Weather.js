@@ -21,7 +21,6 @@ const Weather = () => {
         axios.get(PROXY_URL+WEATHER_API)
              .then(data => {
                  if(data) {
-                    console.log(data);
                     const temperature = data.data.current.temp_c+"°";
                     const icon = `http://${data.data.current.condition.icon}`;
                     

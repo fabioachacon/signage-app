@@ -24,7 +24,7 @@ const StockPrice = () => {
             const response = await axios.get(PROXY_URL + DOLLAR_PRICE_API);
             const data = response.data;
             const currentPrice = parseFloat(data.USD.high).toFixed(2);
-            console.log('dollar data', response.data.USD.high);
+    
 
             setDollarPrice(currentPrice);
 
