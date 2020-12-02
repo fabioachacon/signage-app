@@ -17,7 +17,7 @@ export const loadDocuments = () => async (dispatch) => {
     const dataCollection = await db.collection('uploads').get();
     const dataArray = dataCollection.docs.map(doc => doc.data());
 
-   dispatch({
+  dispatch({
         type: 'FETCH_DATA',
         payload: dataArray
     })

@@ -1,32 +1,34 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {loadDocuments} from '../actions/dataAction';
 
 
 const Player = ({
-    videoRef, 
-    isPlaying, 
-    currentVideo, 
-    setCurrentVideo,
-    setVideos,
-    videos
-
+    videoRef
 }) => {
 
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
+    dispatch(loadDocuments())
+  
+    }, [dispatch]);
+
+    const [index, setIndex] = useState(1);
+    const {documents} = useSelector((state) =>  state.data);
 
     const videoEndHandler = async () => {
-        let currentIndex = videos.findIndex((video) => video.id === currentVideo.id);
-        let video = videos[(currentIndex + 1) % videos.length];
-        await setCurrentVideo(video);
-        if (isPlaying) videoRef.current.play();
+        let currentIndex = (index + 1) % documents.length;
+        currentIndex =  currentIndex ? currentIndex : currentIndex + 1;
+        setIndex(currentIndex);
     }
 
     return(
         <div className="video">
            <div className="video-container">
-           {currentVideo && (
+           {documents[index] && (
             <video
-               src={currentVideo.url}
+               src={documents[index].url}
                onEnded={videoEndHandler}
                controls
                autoPlay={true} 

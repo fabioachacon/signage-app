@@ -6,7 +6,8 @@ const dataReducer = (state=initState, action) => {
     switch(action.type){
         case 'FETCH_DATA':
             return {...state,
-                documents: action.payload
+                documents: action.payload,
+                lenght: action.payload.length
             }
         default:
             return {...state}
