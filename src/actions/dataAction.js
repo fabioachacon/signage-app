@@ -13,6 +13,11 @@ import {app} from '../base';
 
 
 export const loadDocuments = () => async (dispatch) => {
+
+    dispatch({
+        type: 'LOADING',
+    })
+
     const db = app.firestore();
     const dataCollection = await db.collection('uploads').get();
     const dataArray = dataCollection.docs.map(doc => doc.data());

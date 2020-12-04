@@ -15,9 +15,9 @@ const Player = ({
     }, [dispatch]);
 
     const [index, setIndex] = useState(1);
-    const {documents} = useSelector((state) =>  state.data);
+    const {documents, isLoading} = useSelector((state) =>  state.data);
 
-    const videoEndHandler = async () => {
+    const videoEndHandler = () => {
         let currentIndex = (index + 1) % documents.length;
         currentIndex =  currentIndex ? currentIndex : currentIndex + 1;
         setIndex(currentIndex);
@@ -25,16 +25,14 @@ const Player = ({
 
     return(
         <div className="video">
-           <div className="video-container">
-           {documents[index] && (
-            <video
+           <div className="video-container">       
+          { !isLoading && (<video
                src={documents[index].url}
                onEnded={videoEndHandler}
-               controls
                autoPlay={true} 
                ref={videoRef}>
-            </video>     
-           )}
+            </video>   
+            )} 
            </div>
         </div>
     )

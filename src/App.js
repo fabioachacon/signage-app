@@ -12,6 +12,7 @@ function App() {
   const videoRef = useRef();
   const [isPlaying, setIsPlaying] = useState(true);
 
+
   return (
     <div className="App">
         <Player 
