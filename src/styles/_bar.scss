@@ -1,6 +1,6 @@
 .bar {
   background: rgb(14, 14, 14);
-  height: 12vh;
+  height: 9vh;
   color: white;
   display: flex;
 }
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: bolder;
 }
 
@@ -35,13 +35,13 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 1.2rem;
+  font-size: 1rem;
   .Weather {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: lightblue;
     padding-top: 10px;
@@ -64,8 +64,8 @@
 }
 
 .price {
-  font-size: 1.9rem;
-  font-weight: lighter;
+  font-size: 1.6rem;
+  font-weight: bold;
   font-family: sans-serif;
   color: white;
 }
